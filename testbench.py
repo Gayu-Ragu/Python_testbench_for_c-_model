@@ -59,7 +59,10 @@ def run_test(name,stimulus):
         ref = reference(g)
         sb.check(g,dut,ref)
     sb.report()
+    return sb
 
 #main
-run_test("directed",directed_stimulus())
-run_test("Random",random_stimulus(10000, seed=1))
+if __name__ == "__main__":
+
+     run_test("directed",directed_stimulus())
+     run_test("Random",random_stimulus(10000, seed=1))
